@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="CRYPTO CHART"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="formFocusGained"/>
+    <EventHandler event="windowActivated" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowActivated"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" pref="0" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" min="-2" pref="362" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/crypto_chart/img/top_banner.png"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="JPanel_cryptocurrency">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Cryptocurrency">
+                <Property name="tabTitle" type="java.lang.String" value="Cryptocurrency"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/crypto_chart/img/coins.png"/>
+                </Property>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_id_cryptocurrency" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="JLabel_id_of_cryptocurrency_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_name_cryptocurrency" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="JLabel_name_cryptocurrency_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_symbol_cryptocurrency" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="JLabel_symbol_cryptocurrency_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_rank_cryptocurrency" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="JLabel_rank_cryptocurrency_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_price_btc_cryptocurrency" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="JLabel_price_btc_cryptocurrency_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_24hr_volume_cryptocurrency" min="-2" pref="87" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JLabel_24hr_volume_cryptocurrency_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_price_usd_cryptocurrency" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="JLabel_price_usd_cryptocurrency_value" min="-2" pref="113" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="JLabel_market_cap_usd_cryptocurrency" max="32767" attributes="0"/>
+                                  <Component id="JLabel_available_supply_cryptocurrency" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JLabel_total_supply_cryptocurrency" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JLabel_max_supply_cryptocurrency" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JLabel_percentage_change_1hr_cryptocurrency" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JLabel_percentage_change_24hr_cryptocurrency" alignment="0" pref="111" max="32767" attributes="0"/>
+                                  <Component id="JLabel_percentage_change_7d_cryptocurrency" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="JLabel_last_updated_cryptocurrency" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_select_cryptocurrency" min="-2" pref="174" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JComboBox_select_cryptocurrency" min="-2" pref="188" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="JLabel_percentage_change_1hr_cryptocurrency_value" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="JLabel_percentage_change_7d_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel_percentage_change_24hr_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel_last_updated_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="JButton_Cryptocurrency_chart_Enter" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel_market_cap_usd_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel_available_supply_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel_total_supply_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                              <Component id="JLabel_max_supply_cryptocurrency_value" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="JComboBox_select_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="JLabel_select_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="JButton_Cryptocurrency_chart_Enter" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="JLabel_market_cap_usd_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="JLabel_available_supply_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="JLabel_total_supply_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="JLabel_max_supply_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="JLabel_percentage_change_1hr_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="JLabel_percentage_change_24hr_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="JLabel_percentage_change_7d_cryptocurrency_value" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_id_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_id_of_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_name_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_name_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_symbol_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_symbol_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_rank_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_rank_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_price_usd_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_price_usd_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_price_btc_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_price_btc_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="JLabel_24hr_volume_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="JLabel_24hr_volume_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="JLabel_market_cap_usd_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="JLabel_available_supply_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="JLabel_total_supply_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="JLabel_max_supply_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="JLabel_percentage_change_1hr_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="JLabel_percentage_change_24hr_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="JLabel_percentage_change_7d_cryptocurrency" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="JLabel_last_updated_cryptocurrency" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="JLabel_last_updated_cryptocurrency_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="JComboBox_select_cryptocurrency">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="17">
+                    <StringItem index="0" value="Cryptocurrency"/>
+                    <StringItem index="1" value="Bitcoin (BTC)"/>
+                    <StringItem index="2" value="Ethereum (ETH)"/>
+                    <StringItem index="3" value="Ripple (XRP)"/>
+                    <StringItem index="4" value="Cardano (ADA)"/>
+                    <StringItem index="5" value="Stellar (XLM)"/>
+                    <StringItem index="6" value="IOTA (MIOTA)"/>
+                    <StringItem index="7" value="TRON (TRX)"/>
+                    <StringItem index="8" value="VeChain (VEN)"/>
+                    <StringItem index="9" value="OmiseGO (OMG)"/>
+                    <StringItem index="10" value="Verge (XVG)"/>
+                    <StringItem index="11" value="KuCoin Shares (KCS)"/>
+                    <StringItem index="12" value="UTRUST (UTK)"/>
+                    <StringItem index="13" value="Bread (BRD)"/>
+                    <StringItem index="14" value="AppCoins (APPC)"/>
+                    <StringItem index="15" value="Substratum (SUB)"/>
+                    <StringItem index="16" value="carVertical (CV)"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JComboBox_select_cryptocurrencyMouseExited"/>
+                <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JComboBox_select_cryptocurrencyMouseReleased"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_select_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Select Cryptocurrency :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_id_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ID:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_id_of_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_id"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_name_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_name_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_symbol_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Symbol:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_symbol_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_symbol"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_rank_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Rank:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_rank_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_rank"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_price_usd_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Price USD:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_price_usd_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_price_usd"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_price_btc_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Price BTC:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_price_btc_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_price_btc"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_24hr_volume_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="24 hr Volume:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_24hr_volume_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_24h_volume_usd"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_percentage_change_7d_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_percent_change_7d"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_percentage_change_7d_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="% Change 7d:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_percentage_change_24hr_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="% Change 24 hr:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_percentage_change_24hr_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_percent_change_24h"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_percentage_change_1hr_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_percent_change_1h"/>
+              </Properties>
+              <Events>
+                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="JLabel_percentage_change_1hr_cryptocurrency_valueComponentShown"/>
+                <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="JLabel_percentage_change_1hr_cryptocurrency_valuePropertyChange"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_percentage_change_1hr_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="% Change 1 hr:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_max_supply_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Max Supply:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_max_supply_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_max_supply"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_total_supply_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_total_supply"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_total_supply_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Total Supply:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_available_supply_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Available Supply:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_available_supply_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_available_supply"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_market_cap_usd_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_market_cap_usd"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_market_cap_usd_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Market Cap USD:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_last_updated_cryptocurrency">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Last Updated:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_last_updated_cryptocurrency_value">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="value_last_updated"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="JButton_Cryptocurrency_chart_Enter">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/crypto_chart/img/gtk_find_and_replace.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Enter"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JButton_Cryptocurrency_chart_EnterMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Table of Crypto currencies">
+                <Property name="tabTitle" type="java.lang.String" value="Table of Crypto currencies"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/crypto_chart/img/emblem_money.png"/>
+                </Property>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="254" max="32767" attributes="0"/>
+                              <Component id="JButton_Print_JTable_to_PDF" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JButton_Export_Table_to_Excel_XLS_Format" min="-2" pref="234" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="JButton_Export_Table_to_Excel_XLS_Format" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="JButton_Print_JTable_to_PDF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="275" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="jTable1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="4" rowCount="4">
+                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="JButton_Export_Table_to_Excel_XLS_Format">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Export Table to Excel XLS Format"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JButton_Export_Table_to_Excel_XLS_FormatMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="JButton_Print_JTable_to_PDF">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Print"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JButton_Print_JTable_to_PDFMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Portfolio">
+                <Property name="tabTitle" type="java.lang.String" value="Portfolio"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/crypto_chart/img/wallet.png"/>
+                </Property>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_ETH_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_ETH_value" pref="49" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_BTC_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_BTC_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_ADA_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_ADA_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_XRP_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_XRP_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="JLabel_OMG_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_OMG_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_XLM_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_XLM_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_MIOTA_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_MIOTA_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_TRX_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_TRX_value" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="JLabel_VEN_label" min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JTextfield_VEN_value" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_APPC_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_APPC_value" pref="59" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_SUB_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_SUB_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_CV_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_CV_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_BRD_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_BRD_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_XVG_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_XVG_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_KCS_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_KCS_value" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JLabel_UTK_label" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="JTextfield_UTK_value" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="JButton_Portfolio_Get_Value" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="JButton_Portfolio_value_chart" min="-2" pref="115" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="277" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_BTC_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_BTC_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_ETH_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_ETH_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_XRP_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_XRP_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_XVG_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_XVG_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_KCS_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_KCS_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_UTK_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_UTK_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_ADA_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_ADA_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_XLM_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_XLM_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_MIOTA_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_MIOTA_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_TRX_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_TRX_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_BRD_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_BRD_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_APPC_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_APPC_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_SUB_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_SUB_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_CV_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_CV_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_VEN_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_VEN_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="JLabel_OMG_label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="JTextfield_OMG_value" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="JButton_Portfolio_Get_Value" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="JButton_Portfolio_value_chart" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jSeparator2" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jScrollPane2" min="-2" pref="284" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="JLabel_BTC_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="BTC"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_ETH_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ETH"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_XRP_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="XRP"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_ADA_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ADA"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_XLM_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="XLM"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_MIOTA_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="MIOTA"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_TRX_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="TRX"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_VEN_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="VEN"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_OMG_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="OMG"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_XVG_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="XVG"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_KCS_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="KCS"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_UTK_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="UTK"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_BTC_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_ETH_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_XRP_value">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTextfield_XRP_valueActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_ADA_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_XLM_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_MIOTA_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_TRX_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_VEN_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_OMG_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_XVG_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_KCS_value">
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_UTK_value">
+            </Component>
+            <Component class="javax.swing.JSeparator" name="jSeparator1">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="orientation" type="int" value="1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_BRD_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="BRD"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_BRD_value">
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_APPC_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="APPC"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_APPC_value">
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_SUB_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="SUB"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_SUB_value">
+            </Component>
+            <Component class="javax.swing.JLabel" name="JLabel_CV_label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CV"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="JTextfield_CV_value">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTextfield_CV_valueActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="JButton_Portfolio_Get_Value">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/crypto_chart/img/calculator.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Get Value"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JButton_Portfolio_Get_ValueMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="jSeparator2">
+              <Properties>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="99" red="99" type="rgb"/>
+                </Property>
+                <Property name="orientation" type="int" value="1"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="JTextArea_portfolio_value">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="JButton_Portfolio_value_chart">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/crypto_chart/img/pie_chart.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Chart"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
