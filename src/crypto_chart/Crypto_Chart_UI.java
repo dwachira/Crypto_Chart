@@ -7,6 +7,8 @@ package crypto_chart;
 
 import com.sun.rowset.internal.Row;
 import java.awt.Color;
+import java.awt.Desktop;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -14,6 +16,7 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 import java.net.URL;
 import java.awt.print.*;
+import java.net.URI;
 import java.nio.file.Path;
 import java.text.MessageFormat;
 import java.util.TimerTask;
@@ -23,10 +26,11 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import jxl.Sheet;
 import jxl.Workbook;
+import org.jfree.ui.RefineryUtilities;
 
 public class Crypto_Chart_UI extends javax.swing.JFrame 
 {
-    
+    String details_searched_by_user = "[Start";
     
     public Crypto_Chart_UI() 
     {
@@ -139,6 +143,9 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
+            }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
             }
         });
 
@@ -474,9 +481,80 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
 
         JLabel_UTK_label.setText("UTK");
 
+        JTextfield_BTC_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_BTC_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_ETH_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_ETH_valueKeyPressed(evt);
+            }
+        });
+
         JTextfield_XRP_value.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTextfield_XRP_valueActionPerformed(evt);
+            }
+        });
+        JTextfield_XRP_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_XRP_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_ADA_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_ADA_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_XLM_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_XLM_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_MIOTA_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_MIOTA_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_TRX_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_TRX_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_VEN_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_VEN_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_OMG_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_OMG_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_XVG_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_XVG_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_KCS_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_KCS_valueKeyPressed(evt);
+            }
+        });
+
+        JTextfield_UTK_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_UTK_valueKeyPressed(evt);
             }
         });
 
@@ -485,15 +563,38 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
 
         JLabel_BRD_label.setText("BRD");
 
+        JTextfield_BRD_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_BRD_valueKeyPressed(evt);
+            }
+        });
+
         JLabel_APPC_label.setText("APPC");
 
+        JTextfield_APPC_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_APPC_valueKeyPressed(evt);
+            }
+        });
+
         JLabel_SUB_label.setText("SUB");
+
+        JTextfield_SUB_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_SUB_valueKeyPressed(evt);
+            }
+        });
 
         JLabel_CV_label.setText("CV");
 
         JTextfield_CV_value.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JTextfield_CV_valueActionPerformed(evt);
+            }
+        });
+        JTextfield_CV_value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                JTextfield_CV_valueKeyPressed(evt);
             }
         });
 
@@ -514,6 +615,11 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
 
         JButton_Portfolio_value_chart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/crypto_chart/img/pie_chart.png"))); // NOI18N
         JButton_Portfolio_value_chart.setText("Chart");
+        JButton_Portfolio_value_chart.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JButton_Portfolio_value_chartMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -795,7 +901,7 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
     }
     else if (JComboBox_select_cryptocurrency.getSelectedIndex() != 0) 
     {
-        
+        details_searched_by_user = details_searched_by_user + "] [" + JComboBox_select_cryptocurrency.getSelectedItem().toString() + " Data";
     try
      {
         String Jcombobox_selected_crypto_value = JComboBox_select_cryptocurrency.getSelectedItem().toString();
@@ -939,11 +1045,11 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
             else
             {
                 double d = Double.parseDouble(crypto_coins_array_data[k_counter]);
-                if (d > 1)
+                if (d > 0)
                 {
                     crypto_coins_array_data[k_counter] = "<html><font color='green'>" + d + "</font></html>";
                 }
-                else if (d < 1)
+                else if (d < 0)
                 {
                     crypto_coins_array_data[k_counter] = "<html><font color='red'>" + d + "</font></html>";
                 }
@@ -978,7 +1084,8 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
     }//GEN-LAST:event_JButton_Cryptocurrency_chart_EnterMouseClicked
 
     private void JButton_Export_Table_to_Excel_XLS_FormatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JButton_Export_Table_to_Excel_XLS_FormatMouseClicked
-
+        details_searched_by_user = details_searched_by_user + "]" + "[Export_Table_to_Excel_XLS_Format";
+        
               try 
                 {   
                     toExcel(jTable1, new File("result_crypto_data.xls"));
@@ -1000,6 +1107,8 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
     }//GEN-LAST:event_JButton_Export_Table_to_Excel_XLS_FormatMouseClicked
 
     private void JButton_Print_JTable_to_PDFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JButton_Print_JTable_to_PDFMouseClicked
+    details_searched_by_user = details_searched_by_user + "]" + "[Printing Crypto Currency JTable";
+        
     MessageFormat header = new MessageFormat("Report Print");
     MessageFormat footer = new MessageFormat("Page 0, number, integer");
 
@@ -1033,6 +1142,8 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
     }//GEN-LAST:event_JTextfield_CV_valueActionPerformed
 
     private void JButton_Portfolio_Get_ValueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JButton_Portfolio_Get_ValueMouseClicked
+        details_searched_by_user = details_searched_by_user + "]" + "[Get Value of Portfolio";
+
         String BTC_held = JTextfield_BTC_value.getText();
         String ETH_held = JTextfield_ETH_value.getText();
         String XRP_held = JTextfield_XRP_value.getText();
@@ -1088,6 +1199,283 @@ public class Crypto_Chart_UI extends javax.swing.JFrame
         
         JTextArea_portfolio_value.setText(results_portfolio);
     }//GEN-LAST:event_JButton_Portfolio_Get_ValueMouseClicked
+
+    private void JButton_Portfolio_value_chartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JButton_Portfolio_value_chartMouseClicked
+        details_searched_by_user = details_searched_by_user + "]" + "[Get Pie Chart of Portfolio";
+
+        String BTC_held = JTextfield_BTC_value.getText();
+        String ETH_held = JTextfield_ETH_value.getText();
+        String XRP_held = JTextfield_XRP_value.getText();
+        String ADA_held = JTextfield_ADA_value.getText();
+        String XLM_held = JTextfield_XLM_value.getText();
+        String MIOTA_held = JTextfield_MIOTA_value.getText();
+        String TRX_held = JTextfield_TRX_value.getText();
+        String VEN_held = JTextfield_VEN_value.getText();
+        String OMG_held = JTextfield_OMG_value.getText();
+        String XVG_held = JTextfield_XVG_value.getText();
+        String KCS_held = JTextfield_KCS_value.getText();
+        String UTK_held = JTextfield_UTK_value.getText();
+        String BRD_held = JTextfield_BRD_value.getText();
+        String APPC_held = JTextfield_APPC_value.getText();
+        String SUB_held = JTextfield_SUB_value.getText();
+        String CV_held = JTextfield_CV_value.getText();
+        
+      if(BTC_held.trim().length() == 0)
+       { BTC_held= "" + 0;}
+      if(ETH_held.trim().length() == 0)
+       { ETH_held= "" + 0;}
+      if(XRP_held.trim().length() == 0)
+       { XRP_held= "" + 0;}
+      if(ADA_held.trim().length() == 0)
+       { ADA_held= "" + 0;}
+      if(XLM_held.trim().length() == 0)
+       { XLM_held= "" + 0;}
+      if(MIOTA_held.trim().length() == 0)
+       { MIOTA_held= "" + 0;}
+      if(TRX_held.trim().length() == 0)
+       { TRX_held= "" + 0;}
+      if(VEN_held.trim().length() == 0)
+       { VEN_held= "" + 0;}
+      if(OMG_held.trim().length() == 0)
+       { OMG_held= "" + 0;}
+      if(XVG_held.trim().length() == 0)
+       { XVG_held= "" + 0;}
+      if(KCS_held.trim().length() == 0)
+       { KCS_held= "" + 0;}
+      if(UTK_held.trim().length() == 0)
+       { UTK_held= "" + 0;}
+      if(BRD_held.trim().length() == 0)
+       { BRD_held= "" + 0;}
+      if(APPC_held.trim().length() == 0)
+       { APPC_held= "" + 0;}
+      if(SUB_held.trim().length() == 0)
+       { SUB_held= "" + 0;}
+      if(CV_held.trim().length() == 0)
+       { CV_held= "" + 0;}
+      
+      
+        PieChart_Crypto piechart_crypto = new PieChart_Crypto("Pie Chart - Crypto Currency Portfolio",BTC_held, ETH_held, XRP_held, ADA_held, XLM_held, MIOTA_held, TRX_held, VEN_held, OMG_held, XVG_held, KCS_held, UTK_held, BRD_held, APPC_held, SUB_held, CV_held);
+        
+        piechart_crypto.pack();
+        RefineryUtilities.centerFrameOnScreen(piechart_crypto);
+        piechart_crypto.setVisible(true);       
+        
+        
+    }//GEN-LAST:event_JButton_Portfolio_value_chartMouseClicked
+
+    private void JTextfield_BTC_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_BTC_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_BTC_valueKeyPressed
+
+    private void JTextfield_ETH_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_ETH_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_ETH_valueKeyPressed
+
+    private void JTextfield_XRP_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_XRP_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_XRP_valueKeyPressed
+
+    private void JTextfield_ADA_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_ADA_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_ADA_valueKeyPressed
+
+    private void JTextfield_XLM_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_XLM_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_XLM_valueKeyPressed
+
+    private void JTextfield_MIOTA_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_MIOTA_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_MIOTA_valueKeyPressed
+
+    private void JTextfield_TRX_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_TRX_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_TRX_valueKeyPressed
+
+    private void JTextfield_VEN_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_VEN_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_VEN_valueKeyPressed
+
+    private void JTextfield_OMG_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_OMG_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_OMG_valueKeyPressed
+
+    private void JTextfield_XVG_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_XVG_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_XVG_valueKeyPressed
+
+    private void JTextfield_KCS_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_KCS_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_KCS_valueKeyPressed
+
+    private void JTextfield_UTK_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_UTK_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_UTK_valueKeyPressed
+
+    private void JTextfield_BRD_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_BRD_valueKeyPressed
+        char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_BRD_valueKeyPressed
+
+    private void JTextfield_APPC_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_APPC_valueKeyPressed
+      char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_APPC_valueKeyPressed
+
+    private void JTextfield_SUB_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_SUB_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_SUB_valueKeyPressed
+
+    private void JTextfield_CV_valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTextfield_CV_valueKeyPressed
+    char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||
+         (c == KeyEvent.VK_BACK_SPACE) ||
+         (c == KeyEvent.VK_DELETE))) {
+        getToolkit().beep();
+        JOptionPane.showMessageDialog(null, " * Please enter only numeric digits (0-9)", "Non Numeric Character Entered ", JOptionPane.ERROR_MESSAGE);
+        evt.consume();
+      }
+    }//GEN-LAST:event_JTextfield_CV_valueKeyPressed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+
+        String ObjButtons[] = {"Yes","No"};
+                int PromptResult = JOptionPane.showOptionDialog(null, 
+                    "Are you sure you want to exit?", "Crypto Chart", 
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, 
+                    ObjButtons,ObjButtons[1]);
+                if(PromptResult==0)
+                {
+                  try {
+                        String url = "https://github.com/dwachira/Crypto_Chart";
+
+                        if (Desktop.isDesktopSupported()) {
+                            // Windows
+                            Desktop.getDesktop().browse(new URI(url));
+                        } else {
+                            // Ubuntu
+                            Runtime runtime = Runtime.getRuntime();
+                            runtime.exec("/usr/bin/firefox -new-window " + url);
+                        }
+                      } 
+                    catch (Exception ex) 
+                    {
+                      System.out.print("Error inside formWindowClosing () ------>"+ ex);  
+                    }
+                  this.hide();
+                  if(details_searched_by_user.equals(""))
+                  {}
+                  else
+                  {
+                  details_searched_by_user = details_searched_by_user + "] [End]";
+                  
+                  new Program_Usage_Statistics().logAccess(details_searched_by_user);
+                  } 
+                  System.exit(0);          
+                }          // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
